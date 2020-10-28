@@ -140,6 +140,6 @@ if __name__ == "__main__":
     parser.add_argument('--user_id', type=str, help='Input id users')
     parser.add_argument('--country', type=str, help='Input country users')
 
-    args = parser.parse_args()
+    args, unknown_args = parser.parse_known_args()
     diabotical_parser(mode=args.mode, count=args.count, user_id=args.user_id,
                       country=args.country)
